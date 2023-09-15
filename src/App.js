@@ -1,9 +1,9 @@
 import React from 'react'
-import './App.css';
+import  Login  from './components/login';
 
 const App = () => {
   return (
-    <div>one</div>
+    <div><Login></Login></div>
   )
 }
 
