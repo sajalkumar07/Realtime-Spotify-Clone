@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import logo from './images/logo.png'
 export const Login = () => {
 
   const handleClick = () =>  {
@@ -22,7 +21,7 @@ export const Login = () => {
 
   return (
     <Container className='container'>
-      <img className='logo' src={logo} alt=""/>
+      <img className='logo' src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Black.png" alt=""/>
       <button onClick={handleClick} className='login-button'>Connect Spotify</button>
     </Container>
   )
