@@ -16,7 +16,7 @@ const App = () => {
   }, [token, dispatch]);
   return (
     <div> {
-      token ? <Spotify></Spotify> : <Login></Login>}<Login></Login>
+      token ? <Spotify></Spotify> : <Login></Login>}
     </div>
   )
 }
