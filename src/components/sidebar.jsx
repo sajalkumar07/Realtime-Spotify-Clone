@@ -2,6 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import {IoLibrary} from 'react-icons/io5';
 import {MdHomeFilled, MdSearch} from 'react-icons/md'
+import Playlist from './playlist'
 import './sidebar.css'
 
 const sidebar = () => {
@@ -26,6 +27,7 @@ const sidebar = () => {
           </li>
         </ul>
       </div>
+      <Playlist></Playlist>
     </Container>
   )
 }
