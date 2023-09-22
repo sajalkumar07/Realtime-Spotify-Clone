@@ -22,14 +22,15 @@ img{
     max-inline-size: 80%;
     block-size: auto;
 }
-ul{
+.sidebar-content{
     list-style: none;
     display: flex;
     flex-direction: column;
     gap: 1rem;
     padding: 1rem;
+    font-size: 20px
 }
-li{
+.sidebar-content-nested{
     display: flex;
     gap: 1rem;
     cursor: pointer;
@@ -38,6 +39,36 @@ li{
         color: white;
     }
 }
-#sidebar-playlists{
-    gap: 10px;
+.playlists-continer{
+    height: 100%;
+    overflow: hidden;
+}
+.sidebar-playlists{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    font-size: 20px;
+    height: 45vh;
+    max-height: 100%; 
+    overflow: auto;
+    margin-top: 20px;
+    &::-webkit-scrollbar{
+        width: 10px;
+    }
+      &::-webkit-scrollbar-thumb{
+        background-color: rgb(103, 99, 99);
+      }
+   
+}
+.playlist-coloums{
+    display: flex;
+    gap: 1rem;
+    cursor: pointer;
+    flex-direction: column;
+    transition: 0.3s ease-in-out;
+    &:hover{
+        color: white;
+    }
 }

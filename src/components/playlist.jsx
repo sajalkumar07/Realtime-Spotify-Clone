@@ -25,17 +25,16 @@ const Playlists = () => {
         getPlaylistData();  
     },[token,dispatch]);
   return (
-    <div>
-        <ul id='sidebar-playlists'>
+    <div className='playlists-continer'>
+        <ul className='sidebar-playlists'>
             {
                 playlists.map(({name, id})=>{
                     return(
-                        <li key={id}>{name}
-                           
-                        </li>
+                        <li className='playlist-coloums' key={id}>{name}</li>
                     )
                 })
             }
+            
         </ul>
     </div>
   )

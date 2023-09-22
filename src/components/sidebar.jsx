@@ -12,16 +12,16 @@ const sidebar = () => {
         <div className="logo">
           <img className='logo' src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_White.png" alt=""/>
         </div>
-        <ul>
-          <li>
+        <ul className='sidebar-content'>
+          <li className='sidebar-content-nested'>
           <MdHomeFilled></MdHomeFilled>
             <span>Home</span>
           </li>
-          <li>
+          <li className='sidebar-content-nested'>
             <MdSearch></MdSearch>
             <span>Search</span>
           </li>
-          <li>
+          <li className='sidebar-content-nested'>
             <IoLibrary></IoLibrary>
             <span>Your Library</span>
           </li>
