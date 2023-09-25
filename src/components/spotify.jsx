@@ -5,7 +5,7 @@ import Body from './body'
 import Footer from './footer'
 import Navbar from './navbar'
 import Sidebar from './sidebar'
-import './spotify.css'
+import '../styles/spotify.css'
 import { useStateProvider } from '../Assets/SatateProvider'
 import { reducerCases } from '../Assets/constents'
 
@@ -14,7 +14,7 @@ const Spotify = () => {
 
   useEffect(()=>{
     const getUserInfo = async ()=>{
-      const {data} = await axios.get("https://api.spotify.com/v1/me/playlists", {
+      const {data} = await axios.get("https://api.spotify.com/v1/me/", {
         headers:{
           Authorization: "Bearer  "+ token,
           "Content-Type": "application/json",
@@ -22,7 +22,7 @@ const Spotify = () => {
       })
       const userInfo = {
         userId: data.id,
-        userName: data.display_name,
+        userName: data.display_name,  
     };
     dispatch({type:reducerCases.SET_USER,userInfo})
     };

@@ -3,21 +3,23 @@ import styled from 'styled-components';
 import {FaSearch} from 'react-icons/fa';
 import {CgProfile} from 'react-icons/cg';
 import { useStateProvider } from '../Assets/SatateProvider';
+import '../styles/navbar.css'
 
 const Navbar = () => {
 
   const [{userInfo}]=useStateProvider();
+  console.log({userInfo}, "from navbar");
   return (
-    <Container>
+    <Container className='main-section-navbar'>
         <div className="search-bar">
           <FaSearch/>
-          <input type="text" placeholder="Artist, songs, or podcast" />
+          <input className='search-section' type="text" placeholder="Artist, songs, or podcast" />
         </div>
         <div className="avatar">
-          <a href="#">
+          <a className='profile-icon' href="#">
             <CgProfile/>
               <span>
-                {userInfo?.name}  
+                {userInfo?.userName}  
               </span>
           </a>
         </div>

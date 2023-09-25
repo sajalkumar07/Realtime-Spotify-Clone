@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import './footer.css'
+import '../styles/footer.css'
 const footer = () => {
   return (
     <Container className='foorter-container' ></Container>
