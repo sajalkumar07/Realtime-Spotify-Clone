@@ -1,12 +1,33 @@
-import React from 'react'
+import axios from 'axios'
+import React, {useEffect} from 'react'
 import styled from 'styled-components'
 import Body from './body'
 import Footer from './footer'
 import Navbar from './navbar'
 import Sidebar from './sidebar'
 import './spotify.css'
+import { useStateProvider } from '../Assets/SatateProvider'
+import { reducerCases } from '../Assets/constents'
 
-const spotify = () => {
+const Spotify = () => { 
+  const[{token}, dispatch]=useStateProvider();
+
+  useEffect(()=>{
+    const getUserInfo = async ()=>{
+      const {data} = await axios.get("https://api.spotify.com/v1/me/playlists", {
+        headers:{
+          Authorization: "Bearer  "+ token,
+          "Content-Type": "application/json",
+        },
+      })
+      const userInfo = {
+        userId: data.id,
+        userName: data.display_name,
+    };
+    dispatch({type:reducerCases.SET_USER,userInfo})
+    };
+    getUserInfo();
+  }, [dispatch, token]) 
   return (
     <Container id='container-box'>
       <div className="spotify-body">
@@ -25,5 +46,5 @@ const spotify = () => {
   )
 }
 
-export default spotify
+export default Spotify
 const Container = styled.div``

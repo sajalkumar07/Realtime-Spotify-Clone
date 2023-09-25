@@ -55,10 +55,11 @@ img{
     overflow: auto;
     margin-top: 20px;
     &::-webkit-scrollbar{
-        width: 10px;
+        width: 5px;
     }
       &::-webkit-scrollbar-thumb{
         background-color: rgb(103, 99, 99);
+        border-radius: 20px;
       }
    
 }
