@@ -9,11 +9,13 @@ const Navbar = () => {
 
   const [{userInfo}]=useStateProvider();
   console.log({userInfo}, "from navbar");
+
   return (
     <Container className='main-section-navbar'>
+
         <div className="search-bar">
           <FaSearch/>
-          <input className='search-section' type="text" placeholder="Artist, songs, or podcast" />
+          <input className='search-section' type="search" placeholder="Artist, songs, or podcast" />
         </div>
         <div className="avatar">
           <a className='profile-icon' href="#">
