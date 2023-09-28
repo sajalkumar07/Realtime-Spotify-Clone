@@ -8,7 +8,6 @@ import '../styles/navbar.css'
 const Navbar = () => {
 
   const [{userInfo}]=useStateProvider();
-  console.log({userInfo}, "from navbar");
 
   return (
     <Container className='main-section-navbar'>
