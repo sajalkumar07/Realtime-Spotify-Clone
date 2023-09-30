@@ -49,33 +49,32 @@ const Body = ({headerBackground}) => {
         selectedPlaylist && (
           <>
             <div className="playlist">
-              <div className="image">
-                <img src={selectedPlaylist.image} alt="" />
+            <div className="image">
+              <img src={selectedPlaylist.image} alt="selected playlist" />
+            </div>
+            <div className="details">
+              <span className="type">PLAYLIST</span>
+              <h1 className="title">{selectedPlaylist.name}</h1>
+              <p className="description">{selectedPlaylist.description}</p>
+            </div>
+          </div>
+          <div className="list">
+            <div className="header-row">
+              <div className="col">
+                <span>#</span>
               </div>
-              <div className="details">
-                <span className="type">PLAYLIST</span>
-                <h1 className="title">{selectedPlaylist.name}</h1>
-                <p className="description">{selectedPlaylist.description}</p>
+              <div className="col">
+                <span>TITLE</span>
+              </div>
+              <div className="col">
+                <span>ALBUM</span>
+              </div>
+              <div className="col">
+                <span>
+                  <AiFillClockCircle />
+                </span>
               </div>
             </div>
-
-            <div className="list">
-              <div className="header-row">
-                <div className="col">
-                  <span>#</span>
-                </div>
-                <div className="col">
-                  <span>TITLE</span>
-                </div>
-                <div className="col">
-                  <span>ALBUM</span>
-                </div>
-                <div className="col">
-                  <span><AiFillClockCircle>
-                    </AiFillClockCircle>
-                  </span>
-                </div>
-              </div>
               <div className="tracks">
                 {
                   selectedPlaylist.tracks.map(({
@@ -91,22 +90,22 @@ const Body = ({headerBackground}) => {
                     return(
                       <div className="row">
                         <div className="col">
-                          <span>{index+1}</span>
+                          <span>{index + 1}</span>
                         </div>
-                        <div className="col-detail">
+                        <div className="col detail">
                           <div className="image">
-                            <img src={image} alt="" />
-                            <div className="info">
-                              <span className='name'>{name}</span>
-                              <span>{artists}</span>
-                            </div>
+                            <img src={image} alt="track" />
                           </div>
-                          <div className="col">
-                            <span>{album}</span>
+                          <div className="info">
+                            <span className="name">{name}</span>
+                            <span>{artists}</span>
                           </div>
-                          <div className="col">
-                            <span>{duration}</span>
-                          </div>
+                        </div>
+                        <div className="col">
+                          <span>{album}</span>
+                        </div>
+                        <div className="col">
+                          <span>{duration}</span>
                         </div>
                       </div>
                     )
