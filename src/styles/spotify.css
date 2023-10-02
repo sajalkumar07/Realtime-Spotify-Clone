@@ -22,4 +22,13 @@
     height: 100%;
     width: 100%;
     overflow: auto;
+    &::-webkit-scrollbar{
+        width: 10px;
+        background: linear-gradient(transparent, rgba(0,0,0,1));
+        background-color: rgb(0, 0, 0);
+    }
+      &::-webkit-scrollbar-thumb{
+        background-color: rgb(99, 95, 95);
+        height: 20rem;
+      }
 }
