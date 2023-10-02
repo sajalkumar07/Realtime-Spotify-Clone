@@ -16,7 +16,7 @@
     height: 100%;
     width: 100%;
     background: linear-gradient(transparent, rgba(0,0,0,1));
-    background-color: rgba(32, 87, 100);
+    background-color: rgb(29, 31, 32);
 }
 .body{
     height: 100%;

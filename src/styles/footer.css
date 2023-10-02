@@ -1,4 +1,11 @@
 .foorter-container{
-    background-color: #181818;
+    background-color: #000000;
     height: 100%;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+ 
 }
