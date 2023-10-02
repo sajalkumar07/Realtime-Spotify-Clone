@@ -30,13 +30,15 @@
 }
 .header-row{
     display: grid;
-    grid-template-columns: 0.3fr 3fr 2.1fr 0.1fr;
+    grid-template-columns: 0.3fr 3fr 2.02fr 0.1fr;
     color: #dddcdc;
     margin: 1rem 0 0 0 ;
     position: sticky;
     top: 15vh;
     padding: 1rem 4rem ;
-    transition: 2s ease-in-out;
+    transition: .2s ease-in-out;
+    margin-left: 15px;
+    
 }
 .tracks{
     margin: 0 2rem;

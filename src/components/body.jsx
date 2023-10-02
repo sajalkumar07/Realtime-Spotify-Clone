@@ -126,5 +126,7 @@ const Body = ({headerBackground}) => {
 }
 export default Body
 const Container = styled.div`
-background-color: ${({headerBackground})=>headerBackground ? "rgba(0,0,0,0.6)" : "none"}  
+.header-row{
+  background-color: ${({headerBackground})=>headerBackground ? "black" : "none"}  
+}
 `
