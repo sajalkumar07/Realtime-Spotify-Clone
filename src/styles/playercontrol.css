@@ -1,0 +1,27 @@
+.main-player-section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    color: #b3b3b3;
+    transition: .2s ease-in-out;
+}
+.play-button:hover{
+    transform: scale(1.1);
+}
+.state{
+  color: #b3b3b3;
+}
+.previous, .next, .state{
+    font-size: 2rem;
+    &:hover{
+        color: white;
+    }
+}
+.repeat, .shuffle{
+    color: #b3b3b3;
+    &:hover{
+        color: white;
+    }
+}
+

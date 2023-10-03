@@ -24,13 +24,17 @@ const Playlists = () => {
         };  
         getPlaylistData();  
     },[token,dispatch]);
+
+    const changeCurrentPlaylist = (selectedPlaylistID) => {
+        dispatch({type:reducerCases.SET_PLAYLIST_ID, selectedPlaylistID,})
+    }
   return (
     <div className='playlists-continer'>
         <ul className='sidebar-playlists'>
             {
                 playlists.map(({name, id})=>{
                     return(
-                        <li className='playlist-coloums' key={id}>{name}</li>
+                        <li className='playlist-coloums' key={id} onClick={()=>changeCurrentPlaylist(id)}>{name}</li>
                     )
                 })
             }
