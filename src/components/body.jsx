@@ -48,9 +48,25 @@ const Body = ({headerBackground}) => {
     const seconds = ((ms % 60000)/1000).toFixed(0);
     return minutes + ":" + (seconds < 10 ? "0" : "") + seconds;
   }
-  const playTrack = async(id,name,artists,image,context_uri,track_number)=>{
+  const playTrack = async(
+    id,
+    name,
+    artists,
+    image,
+    context_uri,
+    track_number
+    )=>{
     const response = await axios.put(
       `https://api.spotify.com/v1/me/player/play`,{},
+
+      {
+        context_uri,
+        offset: {
+          position: track_number - 1,
+        },
+        position_ms: 0,
+      },
+      
       {
         headers: {
           Authorization: "Bearer " + token,

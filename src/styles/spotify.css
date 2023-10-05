@@ -29,6 +29,7 @@
     }
       &::-webkit-scrollbar-thumb{
         background-color: rgb(99, 95, 95);
-        height: 20rem;
-      }
+        height: 7rem;
+
+    }
 }

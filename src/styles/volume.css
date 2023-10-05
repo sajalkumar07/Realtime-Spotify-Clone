@@ -1,0 +1,7 @@
+.spotify-volume{
+    display: flex;
+    justify-content: flex-end;
+    margin-left: 170px;
+    height: 4px;
+    width: 8rem;
+}
